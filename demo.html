@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>HashNav</title>
+	<style>
+		.is-active {
+			font-weight:bold;
+		}
+	</style>
+</head>
+<body>
+	
+<a id="first" href="#first" class="is-active">First</a>
+<a id="second" href="#second">Second</a>
+<a id="third" href="#third">Third</a>
+
+<script src="hashnav.js"></script>
+<script>
+HashNav.initial('first');
+HashNav.change(navigate)
+
+function navigate(hash) {
+	var links = document.getElementsByTagName('a');
+	for (var linkIdx = 0; linkIdx < links.length; linkIdx++) {
+		links[linkIdx].className = '';
+	}
+	document.getElementById(hash).className = 'is-active';
+}
+
+var links = document.getElementsByTagName('a');
+for (var linkIdx = 0; linkIdx < links.length; linkIdx++) {
+	links[linkIdx].onclick = function(e) {
+		HashNav.change(e.target.id);
+		e.preventDefault();
+	}
+}
+</script>
+
+</body>
+</html>
