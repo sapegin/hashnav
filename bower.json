@@ -1,0 +1,9 @@
+{
+  "name": "hashnav",
+  "version": "1.0.0",
+  "main": ["./hashnav.js"],
+  "ignore": [
+  	"demo.html"
+  ],
+  "dependencies": {}
+}
