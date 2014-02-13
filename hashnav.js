@@ -52,7 +52,7 @@
 		 * Set/execute change handler
 		 * @param value {Function|String}
 		 */
-		change: function(value, replace) {
+		change: function(value) {
 			if (!this._inited) {
 				this._init();
 			}
@@ -99,7 +99,7 @@
 			this._change(hash || this._initial);
 		},
 
-		_removeHash: function(replace) {
+		_removeHash: function() {
 			if (history.pushState) {
 				var url = window.location.pathname + window.location.search;
 				history.replaceState('', document.title, url);
