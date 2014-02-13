@@ -52,7 +52,7 @@
 		 * Set/execute change handler
 		 * @param value {Function|String}
 		 */
-		change: function(value) {
+		change: function(value, replace) {
 			if (!this._inited) {
 				this._init();
 			}
@@ -93,7 +93,7 @@
 		_hashChanged: function() {
 			var hash = location.hash.slice(1);
 			if (hash === this._initial) {
-				this._removeHash(true);
+				this._removeHash();
 				return;
 			}
 			this._change(hash || this._initial);
@@ -102,7 +102,7 @@
 		_removeHash: function(replace) {
 			if (history.pushState) {
 				var url = window.location.pathname + window.location.search;
-				history[replace ? 'replaceState' : 'pushState']('', document.title, url);
+				history.replaceState('', document.title, url);
 			}
 			else {
 				location.hash = '';
