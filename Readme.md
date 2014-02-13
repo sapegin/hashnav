@@ -22,6 +22,12 @@ Set/execute change handler. `HashNav.change('foo')` will set page has to `#foo` 
 
 See `demo.html`.
 
+
+## Changelog
+
+The changelog can be found in the `Changelog.md` file.
+
+
 ---
 
 ## License
