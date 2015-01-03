@@ -1,9 +1,11 @@
 {
   "name": "hashnav",
-  "version": "1.0.1",
-  "main": ["./hashnav.js"],
+  "version": "1.0.2",
+  "main": [
+    "./hashnav.js"
+  ],
   "ignore": [
-  	"demo.html"
+    "demo.html"
   ],
   "dependencies": {}
 }
