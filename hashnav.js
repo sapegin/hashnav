@@ -83,7 +83,7 @@
 		},
 
 		_init: function() {
-			if (!('onhashchange' in window)) return;
+			if (!('onhashchange' in window) || !window.addEventListener) return;
 			var that = this;
 			window.addEventListener('hashchange', function() {
 				that._hashChanged();
